@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AiForBiz — AI Business Audit</title>
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s){
+      if(f.fbq) return;
+      n=f.fbq=function(){
+        n.callMethod ? n.callMethod.apply(n,arguments) : n.queue.push(arguments);
+      };
+      if(!f._fbq) f._fbq=n;
+      n.push=n;
+      n.loaded=!0;
+      n.version='2.0';
+      n.queue=[];
+      t=b.createElement(e);
+      t.async=!0;
+      t.src=v;
+      s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s);
+    }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '25936076819410061');
+    fbq('track', 'PageView');
+  </script>
+  <!-- End Meta Pixel Code -->
+
+  <style>
+    :root{
+      --bg:#020814;
+      --card:#0b1526;
+      --glass:rgba(255,255,255,.06);
+      --line:rgba(255,255,255,.12);
+      --text:#f4f7ff;
+      --muted:#9fb0c9;
+      --blue:#3b82f6;
+      --blue2:#1d4ed8;
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at top, rgba(59,130,246,.25), transparent 35%),
+        linear-gradient(180deg,#020814,#040d1d 60%,#020814);
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:20px;
+    }
+
+    .container{
+      max-width:900px;
+      width:100%;
+      text-align:center;
+    }
+
+    .brand{
+      font-size:18px;
+      font-weight:600;
+      margin-bottom:20px;
+      opacity:.9;
+    }
+
+    h1{
+      font-size:clamp(34px,5vw,60px);
+      line-height:1.05;
+      letter-spacing:-.03em;
+      margin:0 0 20px;
+    }
+
+    .subtitle{
+      color:var(--muted);
+      font-size:20px;
+      margin-bottom:40px;
+    }
+
+    .panel{
+      background:var(--glass);
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:26px;
+      backdrop-filter:blur(12px);
+      box-shadow:0 20px 60px rgba(0,0,0,.6);
+      margin-bottom:40px;
+    }
+
+    .stats{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+    }
+
+    .stat{
+      padding:18px;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.08);
+      background:rgba(255,255,255,.04);
+    }
+
+    .stat-value{
+      font-size:34px;
+      font-weight:700;
+      margin-bottom:6px;
+    }
+
+    .stat-label{
+      font-size:14px;
+      color:var(--muted);
+    }
+
+    .buttons{
+      display:flex;
+      gap:14px;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      padding:18px 34px;
+      border-radius:16px;
+      font-size:18px;
+      font-weight:700;
+      text-decoration:none;
+      transition:.2s;
+      border:1px solid transparent;
+    }
+
+    .btn-primary{
+      background:linear-gradient(180deg,#4f8cff,#1d4ed8);
+      color:white;
+      box-shadow:0 14px 30px rgba(29,78,216,.45);
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-2px);
+    }
+
+    .btn-secondary{
+      background:rgba(255,255,255,.06);
+      border-color:rgba(255,255,255,.14);
+      color:#dbe6ff;
+    }
+
+    .note{
+      margin-top:16px;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    @media(max-width:700px){
+      h1{font-size:36px}
+      .stats{grid-template-columns:1fr}
+      .buttons{flex-direction:column}
+      .btn{width:100%}
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Meta Pixel Code (noscript) -->
+  <noscript>
+    <img
+      height="1"
+      width="1"
+      style="display:none"
+      src="https://www.facebook.com/tr?id=25936076819410061&ev=PageView&noscript=1"
+      alt=""
+    />
+  </noscript>
+  <!-- End Meta Pixel Code (noscript) -->
+
+  <div class="container">
+    <div class="brand">AiForBiz</div>
+
+    <h1>
+      Find out which parts of your business
+      can be automated with AI
+    </h1>
+
+    <div class="subtitle">
+      Get a quick AI audit and discover
+      where automation can save time
+      and reduce operating costs
+    </div>
+
+    <div class="panel">
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-value">70%</div>
+          <div class="stat-label">of processes can be automated</div>
+        </div>
+
+        <div class="stat">
+          <div class="stat-value">+80h</div>
+          <div class="stat-label">time saved per month</div>
+        </div>
+
+        <div class="stat">
+          <div class="stat-value">$4,500</div>
+          <div class="stat-label">potential savings</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <a id="telegramBtn" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+        Start AI Audit
+      </a>
+
+      <a id="whatsappBtn" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+        Message on WhatsApp
+      </a>
+    </div>
+
+    <div class="note">
+      Click a messenger to open a pre-written message
+    </div>
+  </div>
+
+  <script>
+    const TELEGRAM = "aiforbiz_manager";
+    const WHATSAPP = "18255727624";
+
+    const message = encodeURIComponent(
+`Hello!
+
+I would like to get an AI audit for my business.
+
+I’m interested in:
+• which processes can be automated
+• which AI use case can deliver the fastest ROI
+• where it is best to start implementation`
+    );
+
+    const telegramBtn = document.getElementById("telegramBtn");
+    const whatsappBtn = document.getElementById("whatsappBtn");
+
+    telegramBtn.href = `https://t.me/${TELEGRAM}?text=${message}`;
+    whatsappBtn.href = `https://wa.me/${WHATSAPP}?text=${message}`;
+
+    telegramBtn.addEventListener("click", function () {
+      if (typeof fbq === "function") {
+        fbq('trackCustom', 'TelegramClick', {
+          source: 'landing_main_cta'
+        });
+      }
+    });
+
+    whatsappBtn.addEventListener("click", function () {
+      if (typeof fbq === "function") {
+        fbq('trackCustom', 'WhatsAppClick', {
+          source: 'landing_main_cta'
+        });
+      }
+    });
+  </script>
+</body>
+</html>
