@@ -1,281 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AiForBiz — AI Business Audit</title>
-
-  <!-- Meta Pixel Code -->
-  <script>
-    !function(f,b,e,v,n,t,s){
-      if(f.fbq) return;
-      n=f.fbq=function(){
-        n.callMethod ? n.callMethod.apply(n,arguments) : n.queue.push(arguments);
-      };
-      if(!f._fbq) f._fbq=n;
-      n.push=n;
-      n.loaded=!0;
-      n.version='2.0';
-      n.queue=[];
-      t=b.createElement(e);
-      t.async=!0;
-      t.src=v;
-      s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s);
-    }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
-
-    fbq('init', '25936076819410061');
-    fbq('track', 'PageView');
-  </script>
-  <!-- End Meta Pixel Code -->
-
-  <!-- Yandex.Metrika counter -->
-  <script type="text/javascript">
-    (function(m,e,t,r,i,k,a){
-        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=108197846', 'ym');
-
-    ym(108197846, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
-  </script>
-  <noscript><div><img src="https://mc.yandex.ru/watch/108197846" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-  <!-- /Yandex.Metrika counter -->
-
+  <title>Трафик для покерных клубов</title>
+  <meta property="og:title" content="Трафик для покерных клубов — 2+ года опыта" />
+  <meta property="og:description" content="Приводим платящих игроков в покерные клубы по всему СНГ. Пиши — обсудим твой проект." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
   <style>
-    :root{
-      --bg:#020814;
-      --card:#0b1526;
-      --glass:rgba(255,255,255,.06);
-      --line:rgba(255,255,255,.12);
-      --text:#f4f7ff;
-      --muted:#9fb0c9;
-      --blue:#3b82f6;
-      --blue2:#1d4ed8;
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      height: 100%;
+      font-family: 'Inter', sans-serif;
+      background: #0A0D14;
+      color: #E8EAF0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 24px 16px;
     }
-
-    *{box-sizing:border-box}
-
-    body{
-      margin:0;
-      font-family:Inter,system-ui,Arial,sans-serif;
-      color:var(--text);
-      background:
-        radial-gradient(circle at top, rgba(59,130,246,.25), transparent 35%),
-        linear-gradient(180deg,#020814,#040d1d 60%,#020814);
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:20px;
+    .card {
+      background: #111827;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 24px;
+      padding: 44px 36px;
+      max-width: 480px;
+      width: 100%;
+      box-shadow: 0 40px 100px rgba(0,0,0,0.6);
+      text-align: center;
     }
-
-    .container{
-      max-width:900px;
-      width:100%;
-      text-align:center;
+    .suit {
+      font-size: 42px;
+      margin-bottom: 20px;
+      display: block;
+      filter: drop-shadow(0 0 18px rgba(180,120,255,0.4));
     }
-
-    .brand{
-      font-size:18px;
-      font-weight:600;
-      margin-bottom:20px;
-      opacity:.9;
+    .badge {
+      display: inline-block;
+      background: rgba(139,92,246,0.12);
+      border: 1px solid rgba(139,92,246,0.3);
+      color: #a78bfa;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 22px;
     }
-
-    h1{
-      font-size:clamp(34px,5vw,60px);
-      line-height:1.05;
-      letter-spacing:-.03em;
-      margin:0 0 20px;
+    h1 {
+      font-size: clamp(22px, 5vw, 30px);
+      font-weight: 900;
+      line-height: 1.25;
+      margin-bottom: 14px;
+      color: #fff;
     }
-
-    .subtitle{
-      color:var(--muted);
-      font-size:20px;
-      margin-bottom:40px;
+    h1 span { color: #a78bfa; }
+    .sub {
+      font-size: 15px;
+      color: #8B95A8;
+      line-height: 1.65;
+      margin-bottom: 28px;
     }
-
-    .panel{
-      background:var(--glass);
-      border:1px solid var(--line);
-      border-radius:22px;
-      padding:26px;
-      backdrop-filter:blur(12px);
-      box-shadow:0 20px 60px rgba(0,0,0,.6);
-      margin-bottom:40px;
+    .divider {
+      height: 1px;
+      background: rgba(255,255,255,0.07);
+      margin: 24px 0;
     }
-
-    .stats{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:16px;
+    .perks {
+      list-style: none;
+      text-align: left;
+      margin-bottom: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
     }
-
-    .stat{
-      padding:18px;
-      border-radius:16px;
-      border:1px solid rgba(255,255,255,.08);
-      background:rgba(255,255,255,.04);
+    .perks li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 15px;
+      color: #CBD5E0;
+      line-height: 1.5;
     }
-
-    .stat-value{
-      font-size:34px;
-      font-weight:700;
-      margin-bottom:6px;
+    .perks li .ic {
+      font-size: 17px;
+      flex-shrink: 0;
+      margin-top: 1px;
     }
-
-    .stat-label{
-      font-size:14px;
-      color:var(--muted);
+    .btn {
+      display: block;
+      width: 100%;
+      background: linear-gradient(135deg, #7c3aed, #5b21b6);
+      color: #fff;
+      font-size: 17px;
+      font-weight: 800;
+      border: none;
+      border-radius: 14px;
+      padding: 17px 20px;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 8px 32px rgba(124,58,237,0.45);
+      transition: transform .15s, box-shadow .15s;
+      letter-spacing: 0.01em;
     }
-
-    .buttons{
-      display:flex;
-      gap:14px;
-      justify-content:center;
-      flex-wrap:wrap;
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 14px 40px rgba(124,58,237,0.6); }
+    .btn:active { transform: translateY(0); }
+    .note {
+      font-size: 12px;
+      color: #4B5563;
+      margin-top: 14px;
+      line-height: 1.5;
     }
-
-    .btn{
-      padding:18px 34px;
-      border-radius:16px;
-      font-size:18px;
-      font-weight:700;
-      text-decoration:none;
-      transition:.2s;
-      border:1px solid transparent;
-    }
-
-    .btn-primary{
-      background:linear-gradient(180deg,#4f8cff,#1d4ed8);
-      color:white;
-      box-shadow:0 14px 30px rgba(29,78,216,.45);
-    }
-
-    .btn-primary:hover{
-      transform:translateY(-2px);
-    }
-
-    .btn-secondary{
-      background:rgba(255,255,255,.06);
-      border-color:rgba(255,255,255,.14);
-      color:#dbe6ff;
-    }
-
-    .note{
-      margin-top:16px;
-      color:var(--muted);
-      font-size:14px;
-    }
-
-    @media(max-width:700px){
-      h1{font-size:36px}
-      .stats{grid-template-columns:1fr}
-      .buttons{flex-direction:column}
-      .btn{width:100%}
+    @media (max-width: 400px) {
+      .card { padding: 32px 20px; }
     }
   </style>
 </head>
-
 <body>
-  <!-- Meta Pixel Code (noscript) -->
-  <noscript>
-    <img
-      height="1"
-      width="1"
-      style="display:none"
-      src="https://www.facebook.com/tr?id=25936076819410061&ev=PageView&noscript=1"
-      alt=""
-    />
-  </noscript>
-  <!-- End Meta Pixel Code (noscript) -->
-
-  <div class="container">
-    <div class="brand">AiForBiz</div>
-
-    <h1>
-      Find out which parts of your business
-      can be automated with AI
-    </h1>
-
-    <div class="subtitle">
-      Get a quick AI audit and discover
-      where automation can save time
-      and reduce operating costs
-    </div>
-
-    <div class="panel">
-      <div class="stats">
-        <div class="stat">
-          <div class="stat-value">70%</div>
-          <div class="stat-label">of processes can be automated</div>
-        </div>
-
-        <div class="stat">
-          <div class="stat-value">+80h</div>
-          <div class="stat-label">time saved per month</div>
-        </div>
-
-        <div class="stat">
-          <div class="stat-value">$4,500</div>
-          <div class="stat-label">potential savings</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="buttons">
-      <a id="telegramBtn" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-        Start AI Audit
-      </a>
-
-      <a id="whatsappBtn" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
-        Message on WhatsApp
-      </a>
-    </div>
-
-    <div class="note">
-      Click a messenger to open a pre-written message
-    </div>
+  <div class="card">
+    <span class="suit">♠</span>
+    <div class="badge">Для владельцев покерных клубов</div>
+    <h1>Приводим игроков<br>в покерные клубы<br><span>уже 2+ года</span></h1>
+    <p class="sub">Работаем с клубами из Казахстана, Кыргызстана, России и других стран СНГ. Трафик — только платящие игроки, без ботов и мусора.</p>
+    <div class="divider"></div>
+    <ul class="perks">
+      <li><span class="ic">✦</span>Настроенные рекламные кампании под покерную аудиторию</li>
+      <li><span class="ic">✦</span>Опыт работы с клубами в нескольких странах СНГ</li>
+      <li><span class="ic">✦</span>Прозрачная аналитика и отчётность по каждому игроку</li>
+      <li><span class="ic">✦</span>Гибкие условия — обсудим формат под твой клуб</li>
+    </ul>
+    <a class="btn" href="https://t.me/+WstRWb5Vwm9iYTAy" target="_blank">
+      ✈️ Написать в Telegram — обсудим проект
+    </a>
+    <p class="note">Только серьёзные запросы. Ответим в течение нескольких часов.</p>
   </div>
-
-  <script>
-    const TELEGRAM = "aiforbiz_manager";
-    const WHATSAPP = "18255727624";
-
-    const message = encodeURIComponent(
-`Hello!
-
-I would like to get an AI audit for my business.
-
-I’m interested in:
-• which processes can be automated
-• which AI use case can deliver the fastest ROI
-• where it is best to start implementation`
-    );
-
-    const telegramBtn = document.getElementById("telegramBtn");
-    const whatsappBtn = document.getElementById("whatsappBtn");
-
-    telegramBtn.href = `https://t.me/${TELEGRAM}?text=${message}`;
-    whatsappBtn.href = `https://wa.me/${WHATSAPP}?text=${message}`;
-
-    telegramBtn.addEventListener("click", function () {
-      if (typeof fbq === "function") {
-        fbq('trackCustom', 'TelegramClick', {
-          source: 'landing_main_cta'
-        });
-      }
-    });
-
-    whatsappBtn.addEventListener("click", function () {
-      if (typeof fbq === "function") {
-        fbq('trackCustom', 'WhatsAppClick', {
-          source: 'landing_main_cta'
-        });
-      }
-    });
-  </script>
 </body>
 </html>
